@@ -39,7 +39,6 @@ export default function LoginForm() {
     <main className="auth-shell">
       <form className="auth-card" onSubmit={onSubmit}>
         <h1>ورود به سامانه</h1>
-        <p className="muted">نسخه آزمایشی — کاربر پیش‌فرض: admin / Admin@12345</p>
         {expired && !error ? (
           <div className="alert alert-info" role="status">
             <div className="alert-body">
@@ -52,7 +51,6 @@ export default function LoginForm() {
           نام کاربری
           <input
             className="ltr"
-            value={userName}
             onChange={(e) => setUserName(e.target.value)}
             autoComplete="username"
             required
@@ -63,7 +61,6 @@ export default function LoginForm() {
           <input
             className="ltr"
             type="password"
-            value={password}
             onChange={(e) => setPassword(e.target.value)}
             autoComplete="current-password"
             required
